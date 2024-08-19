@@ -12,7 +12,7 @@ const routes = require('./routes/routes')
 const cors = require('cors')
 
 const cookieParser = require('cookie-parser')
-const local = 'http://localhost:4200'
+const local = 'https://chauhanenterprises-b1e2d.web.app'
 //const firebase = 'https://daakgadi.web.app'
 
 dotenv.config()
@@ -20,12 +20,12 @@ dotenv.config()
 const app = express()
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', "http://localhost:4200");
+  res.setHeader('Access-Control-Allow-Origin', "https://chauhanenterprises-b1e2d.web.app");
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   next();
 });
 
-const allowedOrigins = ['http://localhost:4200'];
+const allowedOrigins = ['https://chauhanenterprises-b1e2d.web.app'];
 const corsOptions = {
   origin: function (origin, callback) {
     if (allowedOrigins.includes(origin) || !origin) {
